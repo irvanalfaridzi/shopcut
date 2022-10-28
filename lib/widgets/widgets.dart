@@ -5,3 +5,4 @@ import 'package:shopcut/themes.dart';
 
 part 'categories_item.dart';
 part 'card_locations.dart';
+part 'navbar_button.dart';

@@ -12,59 +12,24 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Container(
-        width: 245,
-        height: 65,
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        margin: EdgeInsets.only(bottom: 20),
-        decoration: BoxDecoration(
-          color: whiteColor,
-          borderRadius: BorderRadius.circular(50),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 17,
-              color: blackColor.withOpacity(0.3),
-              offset: Offset(0, 0),
-              spreadRadius: 1,
-            )
-          ],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.home,
-                color: mainColor,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.shopping_bag_outlined,
-                color: greyColor,
-              ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.person,
-                color: greyColor,
-              ),
-            ),
-          ],
-        ),
-      ),
+      floatingActionButton: NavbarButton(),
       body: Stack(
         children: [
           // background
           Container(
             color: mainColor,
           ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height / 2,
+              color: whiteColor,
+            ),
+          ),
           // top main page
           SafeArea(
+            bottom: false,
             child: Stack(
               children: [
                 Align(
@@ -109,9 +74,11 @@ class _MainPageState extends State<MainPage> {
                 // body main page
                 Container(
                   width: double.infinity,
+                  height: MediaQuery.of(context).size.height,
                   child: ListView(
                     children: [
                       Container(
+                        width: double.infinity,
                         margin: EdgeInsets.only(
                           top: 150,
                         ),
@@ -123,7 +90,6 @@ class _MainPageState extends State<MainPage> {
                             topRight: Radius.circular(20),
                           ),
                         ),
-                        width: double.infinity,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -281,7 +247,7 @@ class _MainPageState extends State<MainPage> {
                                       ))
                                   .toList(),
                             ),
-                            SizedBox(height: 80)
+                            SizedBox(height: 60)
                           ],
                         ),
                       )

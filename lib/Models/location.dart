@@ -9,10 +9,10 @@ enum Categories {
   other
 }
 
-class Locations {
+class Location {
   final int id;
-  final String nameLocations;
-  final String urlGambarLocations;
+  final String name;
+  final String urlImage;
   final double rate;
   final Categories categories;
   final String note;
@@ -21,10 +21,10 @@ class Locations {
   final bool promo;
   final bool closed;
 
-  Locations(
+  Location(
     this.id,
-    this.nameLocations,
-    this.urlGambarLocations,
+    this.name,
+    this.urlImage,
     this.rate,
     this.categories,
     this.note,
@@ -35,8 +35,8 @@ class Locations {
   );
 }
 
-List<Locations> mockLocations = [
-  Locations(
+List<Location> mockLocations = [
+  Location(
     1,
     'Mbak Yayuk - Grand Mall',
     'assets/images/elec-produk-1.png',
@@ -48,7 +48,7 @@ List<Locations> mockLocations = [
     true,
     false,
   ),
-  Locations(
+  Location(
     2,
     'Gramedia - Solo Square',
     'assets/images/elec-produk-2.png',
@@ -60,7 +60,7 @@ List<Locations> mockLocations = [
     false,
     false,
   ),
-  Locations(
+  Location(
     3,
     'iBox - The Park',
     'assets/images/elec-produk-3.png',
@@ -72,7 +72,7 @@ List<Locations> mockLocations = [
     false,
     true,
   ),
-  Locations(
+  Location(
     4,
     'Candi Elektronik - Grand Mall',
     'assets/images/elec-produk-4.png',
@@ -84,7 +84,7 @@ List<Locations> mockLocations = [
     true,
     false,
   ),
-  Locations(
+  Location(
     5,
     'Mi Store - Solo Paragon',
     'assets/images/elec-produk-5.png',
@@ -96,7 +96,7 @@ List<Locations> mockLocations = [
     false,
     false,
   ),
-  Locations(
+  Location(
     6,
     'Ace Hardware - Solo Paragon',
     'assets/images/elec-produk-6.png',

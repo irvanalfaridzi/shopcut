@@ -1,7 +1,7 @@
 part of 'pages.dart';
 
 class LocationPage extends StatelessWidget {
-  final Locations location;
+  final Location location;
   const LocationPage({
     Key? key,
     required this.location,
@@ -19,7 +19,7 @@ class LocationPage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: greyColor,
                 image: DecorationImage(
-                  image: AssetImage(location.urlGambarLocations),
+                  image: AssetImage(location.urlImage),
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.only(
@@ -116,7 +116,7 @@ class LocationPage extends StatelessWidget {
                                     Expanded(
                                       child: Text.rich(
                                         TextSpan(
-                                          text: "${location.nameLocations}",
+                                          text: "${location.name}",
                                           style: TextStyle(
                                             color: blackColor,
                                             fontSize: 18,

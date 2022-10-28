@@ -1,19 +1,19 @@
 part of 'widgets.dart';
 
-class CategoriesItem extends StatefulWidget {
+class CategoryButton extends StatefulWidget {
   final String namaCategories;
   final String urlImages;
 
-  CategoriesItem(
+  CategoryButton(
     this.namaCategories,
     this.urlImages,
   );
 
   @override
-  _CategoriesItemState createState() => _CategoriesItemState();
+  _CategoryButtonState createState() => _CategoryButtonState();
 }
 
-class _CategoriesItemState extends State<CategoriesItem> {
+class _CategoryButtonState extends State<CategoryButton> {
   bool _isClicked = false;
   @override
   Widget build(BuildContext context) {

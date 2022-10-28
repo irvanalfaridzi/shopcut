@@ -1,9 +1,9 @@
 part of 'widgets.dart';
 
-class CardLocations extends StatelessWidget {
-  final Locations location;
+class LocationCard extends StatelessWidget {
+  final Location location;
 
-  CardLocations({
+  LocationCard({
     required this.location,
   });
 
@@ -32,7 +32,7 @@ class CardLocations extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: DecorationImage(
-                  image: AssetImage(location.urlGambarLocations),
+                  image: AssetImage(location.urlImage),
                 ),
               ),
             ),
@@ -47,7 +47,7 @@ class CardLocations extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      '${location.nameLocations}',
+                      '${location.name}',
                       style: TextStyle(
                         color: blackColor,
                         fontSize: 14,

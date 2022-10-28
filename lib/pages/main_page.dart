@@ -190,17 +190,17 @@ class _MainPageState extends State<MainPage> {
                                 spacing: 20,
                                 runSpacing: 38,
                                 children: [
-                                  CategoriesItem('Restaurants',
+                                  CategoryButton('Restaurants',
                                       'assets/images/food-categories.png'),
-                                  CategoriesItem('Supermarket',
+                                  CategoryButton('Supermarket',
                                       'assets/images/supermarket-categories.png'),
-                                  CategoriesItem('Baby and Kids',
+                                  CategoryButton('Baby and Kids',
                                       'assets/images/baby-categories.png'),
-                                  CategoriesItem('Electronics',
+                                  CategoryButton('Electronics',
                                       'assets/images/electronic-categories.png'),
-                                  CategoriesItem('Books',
+                                  CategoryButton('Books',
                                       'assets/images/book-categories.png'),
-                                  CategoriesItem('Other',
+                                  CategoryButton('Other',
                                       'assets/images/other-categories.png'),
                                 ],
                               ),
@@ -242,7 +242,7 @@ class _MainPageState extends State<MainPage> {
                             // Data Locations Categories
                             Column(
                               children: mockLocations
-                                  .map((e) => CardLocations(
+                                  .map((e) => LocationCard(
                                         location: e,
                                       ))
                                   .toList(),

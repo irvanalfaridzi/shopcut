@@ -1,1 +1,1 @@
-part 'locations.dart';
+part 'location.dart';

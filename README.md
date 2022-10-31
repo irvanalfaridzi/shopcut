@@ -1,6 +1,6 @@
 # shopcut
 
-This app created with Flutter 💙 version 2.5.2 with UI by @ilhhasap called shopcut
+This app created with Flutter 💙 version 2.5.2 with UI by [@ilhhasap](https://www.instagram.com/ilhhasap/) called shopcut
 
 https://user-images.githubusercontent.com/44092368/198711435-37ae7380-5987-4091-82a5-9ebab605d871.mp4
 

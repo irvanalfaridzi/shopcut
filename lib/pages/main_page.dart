@@ -15,10 +15,12 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: NavbarButton(),
       body: Stack(
         children: [
-          // background
+          // main color background
           Container(
             color: mainColor,
           ),
+
+          // white color background
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -27,11 +29,13 @@ class _MainPageState extends State<MainPage> {
               color: whiteColor,
             ),
           ),
-          // top main page
+
+          // main page
           SafeArea(
             bottom: false,
             child: Stack(
               children: [
+                // header
                 Align(
                   alignment: Alignment.topRight,
                   child: Image.asset(
@@ -71,7 +75,8 @@ class _MainPageState extends State<MainPage> {
                     ],
                   ),
                 ),
-                // body main page
+
+                // main page body
                 Container(
                   width: double.infinity,
                   height: MediaQuery.of(context).size.height,
@@ -151,6 +156,7 @@ class _MainPageState extends State<MainPage> {
                             SizedBox(
                               height: 22,
                             ),
+
                             // Our Categories
                             Row(
                               children: [
@@ -183,62 +189,17 @@ class _MainPageState extends State<MainPage> {
                             SizedBox(
                               height: 20,
                             ),
-                            Center(
-                              child: Wrap(
-                                alignment: WrapAlignment.spaceBetween,
-                                runAlignment: WrapAlignment.center,
-                                spacing: 20,
-                                runSpacing: 38,
-                                children: [
-                                  CategoryButton('Restaurants',
-                                      'assets/images/food-categories.png'),
-                                  CategoryButton('Supermarket',
-                                      'assets/images/supermarket-categories.png'),
-                                  CategoryButton('Baby and Kids',
-                                      'assets/images/baby-categories.png'),
-                                  CategoryButton('Electronics',
-                                      'assets/images/electronic-categories.png'),
-                                  CategoryButton('Books',
-                                      'assets/images/book-categories.png'),
-                                  CategoryButton('Other',
-                                      'assets/images/other-categories.png'),
-                                ],
-                              ),
-                            ),
+                            CategoriesWrap(),
                             SizedBox(
                               height: 30,
                             ),
+
                             // search
-                            Container(
-                              padding: EdgeInsets.symmetric(horizontal: edge),
-                              width: MediaQuery.of(context).size.width,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Color(0xfff6f6f6),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Search electronics Store',
-                                    style: TextStyle(
-                                      color: greyColor,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.search,
-                                    color: greyColor,
-                                  )
-                                ],
-                              ),
-                            ),
+                            SearchBox(),
                             SizedBox(
                               height: edge,
                             ),
+
                             // Data Locations Categories
                             Column(
                               children: mockLocations

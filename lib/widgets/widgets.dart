@@ -6,3 +6,5 @@ import 'package:shopcut/themes.dart';
 part 'category_button.dart';
 part 'location_card.dart';
 part 'navbar_button.dart';
+part 'search_box.dart';
+part 'categories_wrap.dart';
